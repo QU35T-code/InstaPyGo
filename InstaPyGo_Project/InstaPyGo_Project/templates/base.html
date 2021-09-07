@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="QU35T">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" sizes="192x192" href="{% static 'img/icon.png' %}">
+	<title>InstaPyGo</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+</head>
+<body class="reset-this">
+	<div class="navbar">
+		<div class="container">
+			<a href="#"><img class="logo" src="{% static 'img/navbar/insta_logo.png' %}"></a>
+			<div class="search-container">
+			    <form action="/action_page.php">
+			      <input type="text" placeholder="Rechercher" style="text-align: center;" name="search">
+			    </form>
+			 </div>
+			<div class="icons_group">
+				<a href="#"><img class="icon_element" src="{% static 'img/navbar/home_white.png' %}"></a>
+				<a href="#"><img class="icon_element" src="{% static 'img/navbar/send_white.png' %}"></a>
+				<a href="#"><img class="icon_element" src="{% static 'img/navbar/explore_white.png' %}"></a>
+				<a href="#"><img class="icon_element" src="{% static 'img/navbar/like_white.png' %}"></a>
+				<a href="#"><img class="icon_element" src="{% static 'img/navbar/profile_white.png' %}"></a>
+			</div>
+		</div>
+	</div>
+	<div style="margin-top: 50px;"></div>
+	<div class="story_container">
+	</div>
+	<div style="margin-top: 50px;"></div>
+	<div class="post_container">
+		{% block content %}
+		<div class="profile_informations">
+			<a href="#"><img class="profile_element" src="{% static 'img/navbar/profile_white.png' %}"></a>
+			<a href="#"><h4 class="pseudo">alexis_mrt</h4></a>
+		</div>
+		<img class="photo" src="{% static 'img/posts/landscape.png' %}">
+		<div class="back_infos">
+			<a href="#"><img class="icon_element" src="{% static 'img/navbar/like_white.png' %}"></a>
+			<a href="#"><img class="icon_element" src="{% static 'img/navbar/send_white.png' %}"></a>
+		</div>
+	</div>
+	<div style="margin-top: 100px;"></div>
+		{% endblock %}
+</body>
+</html>
